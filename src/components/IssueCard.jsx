@@ -10,7 +10,7 @@ const IssueCard = ({ issue }) => {
 
   return (
     <div>
-      <div className="card shadow-md hover:shadow-2xl flex flex-col h-full transition-shadow duration-300 dark:border-2 dark:border-gray-700 ">
+      <div className="card shadow-md hover:shadow-2xl flex flex-col h-full transition-shadow duration-300 dark:border dark:border-gray-700 ">
         {/* Image */}
         <figure className="h-56 w-full overflow-hidden rounded-t-xl">
           <img src={image} alt={title} className="w-full h-full object-cover" />
