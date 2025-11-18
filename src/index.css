@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, night;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: orange;
+  --color-secondary: #058c42;
+  --color-accent: #16db65;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] ));
