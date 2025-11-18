@@ -31,7 +31,7 @@ const Add_Issue = () => {
       email,
     };
 
-    fetch("http://localhost:3000/add-issue", {
+    fetch("https://cleanliness-api.vercel.app/add-issue", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -50,7 +50,7 @@ const Add_Issue = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-        <PageTitle title="Add Your Issue"/>
+      <PageTitle title="Add Your Issue" />
 
       <div className="md:grid grid-cols-2 min-h-[calc(100vh-350px)] my-20">
         <div className=" flex justify-center items-center">

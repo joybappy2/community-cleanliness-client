@@ -7,7 +7,7 @@ const LatestIssueCards = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/latest-issues")
+    fetch("https://cleanliness-api.vercel.app/latest-issues")
       .then((res) => res.json())
       .then((data) => {
         setLatestIssues(data);

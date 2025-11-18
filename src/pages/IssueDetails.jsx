@@ -13,7 +13,7 @@ const IssueDetails = () => {
   const [issue, setIssue] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3000/issue-details/${id}`)
+    fetch(`https://cleanliness-api.vercel.app/issue-details/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setIssue(data);
@@ -30,7 +30,7 @@ const IssueDetails = () => {
   const [contributions, setContributions] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`http://localhost:3000/issue/${id}/contributions`)
+    fetch(`https://cleanliness-api.vercel.app/issue/${id}/contributions`)
       .then((res) => res.json())
       .then((data) => {
         setContributions(data);
@@ -67,7 +67,7 @@ const IssueDetails = () => {
       issueImage: image,
     };
 
-    fetch("http://localhost:3000/add-contribution", {
+    fetch("https://cleanliness-api.vercel.app/add-contribution", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -95,7 +95,7 @@ const IssueDetails = () => {
       <PageTitle title={`Details | ${title}`} />
 
       {loading ? (
-        // <LoadingSpinner /> 
+        // <LoadingSpinner />
         ""
       ) : (
         <div>

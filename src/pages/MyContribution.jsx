@@ -11,7 +11,9 @@ const MyContribution = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/my-contributions?email=${user?.email}`)
+    fetch(
+      `https://cleanliness-api.vercel.app/my-contributions?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyContributions(data);

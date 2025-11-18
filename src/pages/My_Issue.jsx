@@ -17,7 +17,7 @@ const My_Issue = () => {
   const statusRef = useRef();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/my-issues?email=${user?.email}`)
+    fetch(`https://cleanliness-api.vercel.app/my-issues?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyIssues(data));
     setLoading(false);
@@ -34,7 +34,7 @@ const My_Issue = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/issue/${id}`, {
+        fetch(`https://cleanliness-api.vercel.app/issue/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -84,7 +84,7 @@ const My_Issue = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/issue/update/${updateId}`, {
+    fetch(`https://cleanliness-api.vercel.app/issue/update/${updateId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
