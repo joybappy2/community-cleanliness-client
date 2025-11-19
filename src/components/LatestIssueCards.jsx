@@ -7,7 +7,7 @@ const LatestIssueCards = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://cleanliness-api.vercel.app/latest-issues")
+    fetch("https://community-cleanliness-server-gold.vercel.app/latest-issues")
       .then((res) => res.json())
       .then((data) => {
         setLatestIssues(data);

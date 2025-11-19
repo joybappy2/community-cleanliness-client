@@ -59,19 +59,20 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "*",
-        Component: ErrorPage,
+        path: "login",
+        Component: Login,
+      },
+
+      {
+        path: "register",
+        Component: Register,
       },
     ],
   },
 
   {
-    path: "login",
-    Component: Login,
-  },
-  {
-    path: "register",
-    Component: Register,
+    path: "*",
+    Component: ErrorPage,
   },
 ]);
 

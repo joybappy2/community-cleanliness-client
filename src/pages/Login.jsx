@@ -1,7 +1,5 @@
 import React, { use } from "react";
-import logiImage from "../assets/loginImage.jpg";
 import { Link, useNavigate } from "react-router";
-import { FaHome } from "react-icons/fa";
 import Swal from "sweetalert2";
 import AuthContext from "../components/AuthContext";
 import PageTitle from "../components/PageTitle";
@@ -54,21 +52,15 @@ const Login = () => {
   };
 
   return (
-    <div className=" md:grid grid-cols-12">
+    <div className="flex justify-center min-h-screen">
       <PageTitle title="Login" />
-
-      {/* IMAGE LEFT */}
-      <div className="col-span-9">
-        <img
-          className="w-full md:h-screen object-cover"
-          src={logiImage}
-          alt=""
-        />
-      </div>
 
       {/* LOGIN FORM RIGHT */}
       <div className="col-span-3 flex flex-col justify-center">
-        <div className="w-full p-10 bg-white">
+        <div className="w-full md:w-lg p-10 bg-base-300 rounded-2xl">
+          <h2 className="text-3xl md:text-4xl text-center mb-5 font-bold">
+            Login Here
+          </h2>
           <form onSubmit={handleEPLogin}>
             <fieldset className="fieldset">
               {/* EMAIL */}
@@ -105,7 +97,7 @@ const Login = () => {
           {/* Google */}
           <button
             onClick={handleGoogleLogin}
-            className="btn w-full bg-white border-secondary mt-1"
+            className="btn w-full border-secondary mt-1"
           >
             <svg
               aria-label="Google logo"
@@ -148,16 +140,6 @@ const Login = () => {
               </Link>
             </span>
           </p>
-        </div>
-
-        <div className="flex justify-center">
-          {/* HOME BUTTON */}
-          <Link to="/">
-            <button className="btn bg-secondary text-white">
-              <FaHome />
-              Return Home
-            </button>
-          </Link>
         </div>
       </div>
     </div>

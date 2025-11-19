@@ -12,7 +12,7 @@ const MyContribution = () => {
 
   useEffect(() => {
     fetch(
-      `https://cleanliness-api.vercel.app/my-contributions?email=${user?.email}`
+      `https://community-cleanliness-server-gold.vercel.app/my-contributions?email=${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {

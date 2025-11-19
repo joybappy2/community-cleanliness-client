@@ -31,7 +31,7 @@ const Add_Issue = () => {
       email,
     };
 
-    fetch("https://cleanliness-api.vercel.app/add-issue", {
+    fetch("https://community-cleanliness-server-gold.vercel.app/add-issue", {
       method: "POST",
       headers: {
         "content-type": "application/json",

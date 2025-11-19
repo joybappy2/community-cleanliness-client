@@ -17,7 +17,9 @@ const My_Issue = () => {
   const statusRef = useRef();
 
   useEffect(() => {
-    fetch(`https://cleanliness-api.vercel.app/my-issues?email=${user?.email}`)
+    fetch(
+      `https://community-cleanliness-server-gold.vercel.app/my-issues?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyIssues(data));
     setLoading(false);
@@ -34,9 +36,12 @@ const My_Issue = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://cleanliness-api.vercel.app/issue/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://community-cleanliness-server-gold.vercel.app/issue/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
@@ -84,13 +89,16 @@ const My_Issue = () => {
       return;
     }
 
-    fetch(`https://cleanliness-api.vercel.app/issue/update/${updateId}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedIssue),
-    }).then(() => {
+    fetch(
+      `https://community-cleanliness-server-gold.vercel.app/issue/update/${updateId}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedIssue),
+      }
+    ).then(() => {
       updateModalRef.current.close();
       Swal.fire({
         title: "Updated Successfully",

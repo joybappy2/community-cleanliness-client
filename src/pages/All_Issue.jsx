@@ -9,7 +9,7 @@ const All_Issue = () => {
   const [filteredIssues, setFilteredIssues] = useState([]);
 
   useEffect(() => {
-    fetch("https://cleanliness-api.vercel.app/all-issues")
+    fetch("https://community-cleanliness-server-gold.vercel.app/all-issues")
       .then((res) => res.json())
       .then((data) => {
         setAllIssues(data);

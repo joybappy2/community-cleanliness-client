@@ -13,7 +13,9 @@ const IssueDetails = () => {
   const [issue, setIssue] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    fetch(`https://cleanliness-api.vercel.app/issue-details/${id}`)
+    fetch(
+      `https://community-cleanliness-server-gold.vercel.app/issue-details/${id}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setIssue(data);
@@ -30,7 +32,9 @@ const IssueDetails = () => {
   const [contributions, setContributions] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(`https://cleanliness-api.vercel.app/issue/${id}/contributions`)
+    fetch(
+      `https://community-cleanliness-server-gold.vercel.app/issue/${id}/contributions`
+    )
       .then((res) => res.json())
       .then((data) => {
         setContributions(data);
@@ -67,13 +71,16 @@ const IssueDetails = () => {
       issueImage: image,
     };
 
-    fetch("https://cleanliness-api.vercel.app/add-contribution", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newContribution),
-    })
+    fetch(
+      "https://community-cleanliness-server-gold.vercel.app/add-contribution",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newContribution),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
