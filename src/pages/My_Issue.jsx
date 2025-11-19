@@ -120,7 +120,7 @@ const My_Issue = () => {
         ) : (
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-              My Issues ({myIssues.length})
+              My <span className="text-secondary">Issues </span>({myIssues.length})
             </h2>
 
             <div className="overflow-x-auto">
