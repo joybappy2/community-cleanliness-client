@@ -10,6 +10,8 @@ import LatestIssueCards from "../components/LatestIssueCards";
 import ReportByCategory from "../components/ReportByCategory";
 import PageTitle from "../components/PageTitle";
 import { Typewriter } from "react-simple-typewriter";
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -88,16 +90,19 @@ const Home = () => {
         </h2>
         <div className="bg-base-300 p-10 rounded-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 justify-between">
+            {/* Stat Card 1 */}
             <div className="">
               <h3 className="text-3xl mb-5 md:text-4xl font-bold text-center">
                 Total Registered <br />{" "}
                 <span className="text-secondary">Users</span>
               </h3>
-              <p className="font-bold text-6xl p-16 md:text-6xl text-center rounded-xl shadow-md hover:shadow-2xl bg-secondary text-white">
+              <p className=" font-bold text-6xl p-16 md:text-6xl text-center rounded-xl shadow-md hover:shadow-2xl bg-secondary text-white">
                 <span>5000+</span>
               </p>
               <p></p>
             </div>
+
+            {/* Stat Card 2 */}
             <div className="">
               <h3 className="text-3xl mb-5 md:text-4xl font-bold text-center">
                 Total Issues <br />{" "}
@@ -108,6 +113,8 @@ const Home = () => {
               </p>
               <p></p>
             </div>
+
+            {/* Stat Card 3 */}
             <div className="">
               <h3 className="text-3xl mb-5 md:text-4xl font-bold text-center">
                 Total Pending <br />{" "}
@@ -120,6 +127,37 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold md:mt-20 mt-10">
+            Join Our Clean Drive Mission
+          </h2>
+          <ul className="mt-6 space-y-1 text-lg text-gray-500">
+            <li>
+              ✔️ Your small effort can make a big difference. Join our volunteer
+              team and help keep our community clean and healthy.
+            </li>
+            <li>
+              ✔️ Let’s make our surroundings better together. Be part of a
+              meaningful clean-up movement.
+            </li>
+            <li>
+              ✔️ We’re looking for energetic volunteers to participate in local
+              clean-up events and awareness drives.
+            </li>
+          </ul>
+        </div>
+
+        <Link to="/register">
+          <button className="btn btn-secondary mt-4">
+            Join Now
+            <span className="-rotate-45">
+              <FaArrowRight size={20} />
+            </span>
+          </button>
+        </Link>
       </section>
     </div>
   );
