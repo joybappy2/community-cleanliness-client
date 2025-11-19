@@ -1,7 +1,5 @@
 import React, { use, useState } from "react";
-import regisgerImage from "../assets/register.jpg";
 import { Link, useNavigate } from "react-router";
-import { FaHome } from "react-icons/fa";
 import AuthContext from "../components/AuthContext";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
@@ -91,22 +89,12 @@ const Register = () => {
   };
 
   return (
-    <div className=" md:grid grid-cols-12">
-      {/* IMAGE LEFT */}
-      <div className="col-span-9 flex justify-center items-center relative">
-        <h2 className="mx-auto z-10 absolute text-5xl md:text-8xl font-bold text-center text-white">
-          Join Us Today
-        </h2>
-        <img
-          className="w-full object-cover md:h-screen blur-xs"
-          src={regisgerImage}
-          alt=""
-        />
-      </div>
+    <div className="min-h-screen flex justify-center items-center">
 
       {/* LOGIN FORM RIGHT */}
-      <div className="col-span-3 flex flex-col justify-center">
-        <div className="w-full p-10 bg-white">
+      <div className=" rounded-xl bg-base-300 ">
+        <div className="md:w-lg w-full p-10 ">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-5">Register Now!</h2>
           <form onSubmit={handleRegister}>
             <fieldset className="fieldset">
               {/* NAME */}
@@ -161,7 +149,7 @@ const Register = () => {
           {/* Google */}
           <button
             onClick={handleGoogleLogin}
-            className="btn w-full bg-white  border-secondary mt-1"
+            className="btn w-full  border-secondary mt-1"
           >
             <svg
               aria-label="Google logo"
@@ -206,15 +194,7 @@ const Register = () => {
           </p>
         </div>
 
-        <div className="flex justify-center mt-0">
-          {/* HOME BUTTON */}
-          <Link to="/">
-            <button className="btn bg-secondary text-white">
-              <FaHome />
-              Return Home
-            </button>
-          </Link>
-        </div>
+       
       </div>
     </div>
   );

@@ -88,8 +88,8 @@ const Navbar = () => {
             {/* Theme Toggole */}
             <input
               type="checkbox"
-              value="night"
-              className="toggle text-white theme-controller"
+              value="light"
+              className="toggle btn btn-outline text-white theme-controller "
             />
 
             <ul className="lg:flex gap-4 items-center hidden">{links}</ul>
@@ -133,14 +133,10 @@ const Navbar = () => {
                     {/* LOGIN REGISTER LOGOUT BUTTON */}
                     <div className="flex gap-2 md:gap-4 mr-4">
                       <NavLink to="/login">
-                        <button className="btn p-3 rounded-3xl md:p-6 bg-white text-black border-none">
-                          Login
-                        </button>
+                        <button className="btn border-none">Login</button>
                       </NavLink>
                       <NavLink to="/register">
-                        <button className="btn p-3 rounded-3xl md:p-6 bg-white text-black border-none ">
-                          Register
-                        </button>
+                        <button className="btn border-none">Register</button>
                       </NavLink>
                     </div>
                   </div>
