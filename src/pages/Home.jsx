@@ -24,7 +24,7 @@ const Home = () => {
               " Take Action Today",
               " Keep Your City Clean",
               " Raise Your Voice",
-              " Fix What Matters",
+              " Fix What Matters ",
             ]}
             loop={0}
             cursor
