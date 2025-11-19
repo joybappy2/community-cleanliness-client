@@ -115,7 +115,7 @@ const MyContribution = () => {
       <div className=" w-full flex justify-center">
         <button
           onClick={handleDownloadPdf}
-          className="btn bg-secondary text-white"
+          className=""
         >
           Download PDF
         </button>
