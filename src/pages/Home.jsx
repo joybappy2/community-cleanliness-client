@@ -15,7 +15,7 @@ import { Link } from "react-router";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto mb-10 p-2">
+    <div className="max-w-7xl mx-auto mb-10 px-4">
       <PageTitle title="Home | Community Cleanliness" />
 
       <h2 className="text-3xl md:text-4xl font-bold text-center my-10 mt-20 px-4">
@@ -70,7 +70,7 @@ const Home = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Report By <span className="text-secondary">Category</span>
         </h2>
-        <div className="bg-base-300 rounded-xl md:p-10 ">
+        <div className="md:bg-base-300 rounded-xl md:p-10 ">
           <ReportByCategory></ReportByCategory>
         </div>
       </section>
