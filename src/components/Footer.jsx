@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex flex-col items-start md:items-start">
             <h1 className="text-2xl font-bold text-white mb-2">FixMyCity</h1>
             <p className="text-gray-200 max-w-xs">
-              A platform to report, track, and solve cleanliness issues in
+              A System to report, track, and solve cleanliness issues in
               your community.
             </p>
           </div>
