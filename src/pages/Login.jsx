@@ -59,7 +59,7 @@ const Login = () => {
       <div className="col-span-3 flex flex-col justify-center">
         <div className="w-full md:w-lg p-10 bg-base-300 rounded-2xl">
           <h2 className="text-3xl md:text-4xl text-center mb-5 font-bold">
-            Login Here
+            Login Here 
           </h2>
           <form onSubmit={handleEPLogin}>
             <fieldset className="fieldset">
