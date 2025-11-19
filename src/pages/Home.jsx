@@ -129,12 +129,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold md:mt-20 mt-10">
+      <section className="">
+        <div className="">
+          <h2 className="text-3xl text-left md:text-4xl font-bold md:mt-20 mt-10">
             Join Our Clean Drive Mission
           </h2>
-          <ul className="mt-6 space-y-1 text-lg text-gray-500">
+          <ul className="mt-6 space-y-1 text-left text-gray-500">
             <li>
               ✔️ Your small effort can make a big difference. Join our volunteer
               team and help keep our community clean and healthy.
@@ -147,11 +147,13 @@ const Home = () => {
               ✔️ We’re looking for energetic volunteers to participate in local
               clean-up events and awareness drives.
             </li>
+            <li>✔️ Support recycling activities</li>
+            <li>✔️ Work with a passionate community group</li>
           </ul>
         </div>
 
         <Link to="/register">
-          <button className="btn btn-secondary mt-4">
+          <button className="btn btn-secondary mt-8 ">
             Join Now
             <span className="-rotate-45">
               <FaArrowRight size={20} />
