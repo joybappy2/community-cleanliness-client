@@ -102,8 +102,9 @@ const IssueDetails = () => {
       <PageTitle title={`Details | ${title}`} />
 
       {loading ? (
-        // <LoadingSpinner />
-        ""
+        <div className="w-full border flex justify-center mt-52">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div>
           <div className=" mx-auto my-10 px-4 lg:px-0">
