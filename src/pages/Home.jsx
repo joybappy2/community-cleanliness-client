@@ -15,7 +15,7 @@ import { Link } from "react-router";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto mb-10 px-4">
+    <div className="max-w-7xl mx-auto mb-10 px-3">
       <PageTitle title="Home | Community Cleanliness" />
 
       <h2 className="text-3xl md:text-4xl font-bold text-center my-10 mt-20 px-4">
@@ -153,7 +153,7 @@ const Home = () => {
         </div>
 
         <Link to="/register">
-          <button className="btn btn-secondary mt-8 ">
+          <button className="btn btn-secondary mt-8 text-white">
             Join Now
             <span className="-rotate-45">
               <FaArrowRight size={20} />

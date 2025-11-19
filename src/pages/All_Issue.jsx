@@ -45,7 +45,7 @@ const All_Issue = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto my-10">
+    <div className="max-w-7xl mx-auto my-10 px-2">
       <PageTitle title="Explore All Issues" />
 
       <h2 className="my-10 text-3xl md:text-4xl font-bold text-center">
