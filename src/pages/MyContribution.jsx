@@ -50,7 +50,7 @@ const MyContribution = () => {
         ) : (
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              My Contribution({myContributions.length})
+              My <span className="text-secondary">Contribution</span>({myContributions.length})
             </h2>
             <div className="overflow-x-auto max-w-7xl mx-auto my-10">
               <table id="my-table" className="table w-full">
